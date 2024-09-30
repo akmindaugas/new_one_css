@@ -78,14 +78,22 @@ a:hover {
   );
 
   .grid {
-    border: 2px solid rgb(234, 239, 234);
+    text-align: center;
+
     .grid_text {
-      border: 4px, solid red;
+      padding: var(--main-padding);
+      margin: 1rem 1rem;
+      border: 4px, solid crimson;
+      border-radius: var(--main-border-radius);
+      font-size: medium;
     }
+    /* .p_first .p_third {
+      color: blue;
+    } */
     .grid_img {
       min-width: 2rem;
       min-height: 2rem;
-      border: 4px solid white;
+      border: 4px solid black;
     }
   }
 }
