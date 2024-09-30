@@ -91,9 +91,12 @@ a:hover {
       color: blue;
     } */
     .grid_img {
-      min-width: 2rem;
-      min-height: 2rem;
-      border: 4px solid black;
+      max-width: 20%;
+      height: auto;
+      border-radius: var(--main-border-radius);
+    }
+    .img_second {
+      text-align: left;
     }
   }
 }
