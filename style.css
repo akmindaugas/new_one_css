@@ -1,20 +1,84 @@
+:root {
+  --main-padding: 1rem 3rem;
+  --main-margin: 0.5rem auto;
+  --main-border-radius: 1rem;
+  --main-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
+
 body {
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 header {
   display: flex;
-  logo {
-    border: 2px solid yellow;
+  justify-content: center;
+  align-items: center;
+  padding: var(--main-padding);
+  justify-content: space-between;
+  margin: var(--main-margin);
+  border-radius: 1rem;
+  box-shadow: var(--main-box-shadow);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 120, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  .img_logo {
+    min-width: 1rem;
+    height: auto;
+  }
+
+  nav {
+    width: 40%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      li {
+        font-size: 2rem;
+        list-style-type: none;
+      }
+    }
   }
 }
+a:link {
+  color: white;
+  text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+}
+a:hover {
+  text-decoration-color: white;
+  text-underline-offset: 0.5rem;
+}
+
 .hero {
+  margin: var(--main-margin);
+  padding: var(--main-padding);
+  border-radius: 1rem;
+  box-shadow: var(--main-box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(254, 254, 254, 1) 0%,
+    rgba(208, 255, 213, 1) 100%
+  );
+
   .grid {
-    border: 2px solid green;
+    border: 2px solid rgb(234, 239, 234);
     .grid_text {
       border: 4px, solid red;
     }
