@@ -197,6 +197,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
   }
+  /* neveikia, kodėl? */
   .contact_us {
     display: none;
   }
