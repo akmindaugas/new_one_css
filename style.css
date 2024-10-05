@@ -3,6 +3,7 @@
   --main-margin: 0.5rem auto;
   --main-border-radius: 1rem;
   --main-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --main-text-color: white;
 }
 
 * {
@@ -31,34 +32,45 @@ header {
     rgba(9, 121, 120, 1) 0%,
     rgba(0, 212, 255, 1) 100%
   );
-  .img_logo {
-    min-width: 1rem;
-    height: auto;
+  a:link {
+    color: white;
+    text-decoration: underline 0.1em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;
   }
+  a:hover {
+    text-decoration-color: white;
+    text-underline-offset: 0.5rem;
+  }
+}
+.img_logo {
+  min-width: 1rem;
+  height: auto;
+}
+.rotate:hover {
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 
-  nav {
-    width: 40%;
+nav {
+  width: 40%;
 
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-      li {
-        font-size: 2rem;
-        list-style-type: none;
-      }
+    li {
+      font-size: 2rem;
+      list-style-type: none;
     }
   }
-}
-a:link {
-  color: white;
-  text-decoration: underline 0.1em rgba(255, 255, 255, 0);
-  transition: text-decoration-color 300ms;
-}
-a:hover {
-  text-decoration-color: white;
-  text-underline-offset: 0.5rem;
 }
 
 .hero {
@@ -102,12 +114,12 @@ a:hover {
 }
 
 footer {
-  height: 5rem;
+  display: flex;
+  justify-content: space-between;
   margin: var(--main-margin);
   padding: var(--main-padding);
-  border-radius: 1rem;
+  border-radius: var(--main-border-radius);
   box-shadow: var(--main-box-shadow);
-
   background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
@@ -115,4 +127,46 @@ footer {
     rgba(254, 254, 254, 1) 0%,
     rgba(41, 140, 51, 1) 75%
   );
+  ul > li {
+    color: var(--main-text-color);
+    list-style-type: none;
+  }
+
+  .contact_us {
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    #email_form {
+      width: 80%;
+      border: none;
+      border-radius: var(--main-border-radius);
+      padding-left: 1rem;
+    }
+    #textarea_form {
+      width: 80%;
+      border-radius: var(--main-border-radius);
+      padding-left: 1rem;
+    }
+    #textarea_button {
+      width: 80%;
+      border: none;
+      border-radius: var(--main-border-radius);
+      cursor: pointer;
+    }
+  }
+  .map_us {
+    width: 33.3%;
+  }
+  .soc_us {
+    width: 33.3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a:hover {
+      background-color: azure;
+    }
+  }
 }
